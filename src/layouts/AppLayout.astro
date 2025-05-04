@@ -1,7 +1,15 @@
 ---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 import Layout from "./Layout.astro";
 ---
 
 <Layout>
-    <slot />
+    <div class="min-h-screen flex flex-col">
+        <Navbar />
+        <main class="flex-1">
+            <slot />
+        </main>
+        <Footer />
+    </div>
 </Layout>
