@@ -8,7 +8,7 @@ export const navigationLinks: NavigationLink[][] = [
         { title: "Home", href: "/" },
         { title: "About", href: "/about" },
         { title: "Exam Emergency", href: "/exam-emergency" },
-        { title: "Notification", href: "/notification" },
+        { title: "Notifications", href: "/notifications" },
         { title: "Scouts", href: "/scouts" },
         { title: "Events", href: "/events" },
         { title: "Contact", href: "/contact" },
