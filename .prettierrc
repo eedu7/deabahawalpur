@@ -1,13 +1,11 @@
 {
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "singleAttributePerLine": true,
-  "singleQuote": false,
-  "semi": true,
-  "jsxSingleQuote": false,
-  "printWidth": 120,
-  "tabWidth": 4,
-  "plugins": [
-    "prettier-plugin-tailwindcss"
-  ]
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "singleAttributePerLine": true,
+    "singleQuote": false,
+    "semi": true,
+    "jsxSingleQuote": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"]
 }
