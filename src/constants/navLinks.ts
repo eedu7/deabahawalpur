@@ -5,7 +5,7 @@ interface NavigationLink {
 
 export const navigationLinks: NavigationLink[][] = [
     [
-        { title: "Home", href: "/home" },
+        { title: "Home", href: "/" },
         { title: "About", href: "/about" },
         { title: "Exam Emergency", href: "/exam-emergency" },
         { title: "Notification", href: "/notification" },
@@ -24,3 +24,5 @@ export const navigationLinks: NavigationLink[][] = [
         { title: "Team", href: "/team" },
     ],
 ];
+
+export const secondGroupHrefs = navigationLinks[1].map((link) => link.href);

@@ -1,13 +1,51 @@
 ---
-import { navigationLinks } from "../../constants/navLinks";
+import { navigationLinks, secondGroupHrefs } from "../../constants/navLinks";
+import { cn } from "../../lib/utils";
+
+const pathname = Astro.url.pathname;
 ---
 
 <nav class="flex justify-end gap-1 items-centergap-2 bg-[#ECEFCA]">
     {
         navigationLinks[0].map((navLink, i) => (
-            <div class="p-2 hover:bg-[#213448] hover:text-white link link-hover underline-offset-4 font-medium text-md">
+            <div
+                class={cn(
+                    "p-2 hover:bg-[#213448] hover:text-white link link-hover underline-offset-4 font-medium text-md",
+                    pathname === navLink.href && "bg-[#213448] text-white",
+                )}
+            >
                 <a href={navLink.href}>{navLink.title}</a>
             </div>
         ))
     }
+    <div class="dropdown dropdown-hover dropdown-left dropdown-start">
+        <div
+            class={cn(
+                "p-2 hover:bg-[#213448] hover:text-white link link-hover underline-offset-4 font-medium text-md",
+                secondGroupHrefs.includes(pathname.replace(/\/$/, "").toLowerCase()) && "bg-[#213448] text-white",
+            )}
+            tabindex="0"
+            role="button"
+        >
+            More
+        </div>
+        <ul
+            tabindex="0"
+            class="dropdown-content relative menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+        >
+            {
+                navigationLinks[1].map((navLink, i) => (
+                    <li
+                        class={cn(
+                            " hover:bg-[#213448] hover:text-white link link-hover underline-offset-4 font-medium" +
+                                " text-md",
+                            pathname === navLink.href && "bg-[#213448] text-white",
+                        )}
+                    >
+                        <a href={navLink.href}>{navLink.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
 </nav>
