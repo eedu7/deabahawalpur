@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils";
 const pathname = Astro.url.pathname;
 ---
 
-<nav class="flex justify-end gap-1 items-centergap-2 bg-[#ECEFCA]">
+<nav class="flex justify-end items-center bg-[#ECEFCA]">
     {
         navigationLinks[0].map((navLink, i) => (
             <div
@@ -31,7 +31,7 @@ const pathname = Astro.url.pathname;
         </div>
         <ul
             tabindex="0"
-            class="dropdown-content relative menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            class="dropdown-content relative menu bg-[#ECEFCA]/90 rounded-box z-1 w-52 p-2 shadow-sm"
         >
             {
                 navigationLinks[1].map((navLink, i) => (
