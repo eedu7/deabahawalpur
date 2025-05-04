@@ -1,0 +1,13 @@
+---
+import { navigationLinks } from "../../constants/navLinks";
+---
+
+<nav class="flex justify-end gap-1 items-centergap-2 bg-[#ECEFCA]">
+    {
+        navigationLinks[0].map((navLink, i) => (
+            <div class="p-2 hover:bg-[#213448] hover:text-white link link-hover underline-offset-4 font-medium text-md">
+                <a href={navLink.href}>{navLink.title}</a>
+            </div>
+        ))
+    }
+</nav>
