@@ -1,0 +1,81 @@
+---
+// TODO: Add links
+const cardData = [
+    {
+        title: "STEAM",
+        description:
+            "STEAM Pakistan is an initiative of the Ministry of Federal Education and Professional Training (MoFEPT)\n" +
+            "that aims to advance secondary school-aged girls’ access to Science, Technology, Engineering, Arts, and\n" +
+            "Mathematics education in Pakistan.",
+        src: "/steam-initiatives.jpg",
+    },
+
+    {
+        title: "TRANSEDUCATION – A HISTORIC PROJECT FOR THE EDUCATION OF TRANSGENDERS",
+        description:
+            "Transgenders are one of the most marginalised segments of the society in Pakistan. They are shunned by their own families and have to face physical, sexual and psychological exploitation all throughout their lives. Doors of formal education and conse",
+        src: "/transgender-education.jpg",
+    },
+    {
+        title: "CONSTIUTUION OF SCHOOL COUNCILS",
+        description:
+            "Students Councils are being constituted in the elementary/high/higher secondary schools in South Punjab. These councils would comprise President, Vice-President, General Secretary, and Class Representatives from Class 6 and above. Whereas, such prec",
+        src: "/student-council.jpg",
+    },
+    {
+        title: "SCHOOLYMPICS",
+        description:
+            "The School Education Department, South Punjab, under the over-all supervision of the Minister for School Education, is organizing a mega sporting event, SCHOOLYMPICS, from November 8-12, 2021. First of its kind, the event has been modelled on the pat",
+        src: "/olympics.jpg",
+    },
+    {
+        title: "Miyawaki Forest",
+        description:
+            "A Miyawaki forest is a dense, mixed forest created using a method developed by Japanese forest ecologist Akira Miyawaki in the 1970s. The method involves planting native trees and understory plants in close proximity to create a natural forest feel.",
+        src: "/miyawaki-forest.jpg",
+    },
+    {
+        title: "Autism Center Bahawalpur",
+        description:
+            "In Bahawalpur, several centers offer specialized services for individuals with Autism Spectrum Disorder (ASD). Here are some notable facilities:",
+        src: "/autism-ceneter.jpg",
+    },
+    {
+        title: "HIGHLIGHTS OF FAROGH PROJECT OF EDUCATION DEPARTMENT SOUTH PUNJAB",
+        description:
+            "There are 3 components of the project as follows: Revival of literary and allied activities in schools Promotion of book reading habits among school children Launch of first ever Online magazine for children in the country",
+        src: "/farogh-project.jpg",
+    },
+    {
+        title: "TEACHING OF CLIMATE CHANGE AS A SEPARATE SUBJECT TO THE SCHOOL CHILDREN IN PAKISTAN",
+        description:
+            "Although Climate Change is a global problem, yet Pakistan is one of the most affected countries, as is evident from the devastating floods that had recently played havoc in different parts of the country. Some extraordinary steps are therefore warran",
+        src: "/green-book.jpg",
+    },
+];
+---
+
+<section class="py-12">
+    <div class="max-w-(--breakpoint-xl) mx-auto text-[#213448]">
+        <h1 class="text-4xl font-semibold font-mono my-2">Initiatives - District Education Authority</h1>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 xl:gap-4 xl:grid-cols-4">
+            {
+                cardData.map((data) => (
+                    <div class="card bg-base-100 xl:w-80 shadow-md group">
+                        <figure>
+                            <img
+                                src={data.src}
+                                alt={data.title}
+                                class="aspect-ratio group-hover:scale-125 ease-in transition-all duration-200 delay-500 object-cover h-full w-full"
+                            />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">{data.title}</h2>
+                            <p>{data.description}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
